@@ -1,0 +1,31 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+Redirect /reference/institutions-culturelles/ http://www.jerome-pellerin.com/references/
+Redirect /reference/opera/ http://www.jerome-pellerin.com/references/
+Redirect /reference/chanson/ http://www.jerome-pellerin.com/references/
+Redirect /reference/chef-dorchestre/ http://www.jerome-pellerin.com/references/
+Redirect /reference/collectivite-etat/ http://www.jerome-pellerin.com/references/
+Redirect /reference/compagnie/ http://www.jerome-pellerin.com/references/
+Redirect /reference/ensemble-musical/ http://www.jerome-pellerin.com/references/
+Redirect /reference/entreprise/ http://www.jerome-pellerin.com/references/
+Redirect /reference/festival/ http://www.jerome-pellerin.com/references/
+Redirect /reference/photographe/ http://www.jerome-pellerin.com/references/
+
+
+Redirect /categorie/affiches/ http://www.jerome-pellerin.com/realisations/
+Redirect /categorie/creations-visuelles/ http://www.jerome-pellerin.com/realisations/
+Redirect /categorie/logos/ http://www.jerome-pellerin.com/realisations/
+Redirect /categorie/publications/ http://www.jerome-pellerin.com/realisations/
+Redirect /categorie/web/ http://www.jerome-pellerin.com/realisations/
+#RewriteRule ^/reference/$ http://www.jerome-pellerin.com/references/ [R=301]
+#RewriteRule ^(.*)$ https://www.noveaunomdomaine.com/$1 [R=301,L]
+# END WordPress

@@ -1,0 +1,1666 @@
+/******************************************************************
+Theme Name: Jérôme Pellerin
+Theme URI: http://www.jerome-pellerin.com
+Description: Thème basé sur bootstrap pour Jérôme Pellerin
+Author: Erwan Tanguy - Ticoët
+Author URI: http://www.ticoet.fr/
+Version: 1.0
+*********************************************************************/
+
+@import url(css/bootstrap.min.css);
+@import url(css/font-awesome.min.css);
+
+/****** FONTS *******/
+/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);*/
+/*@import url(css/font-raleway.css);*/
+/*@font-face {
+    font-family: 'mode_gregular';
+    src: url('fonts/modeg-webfont.eot');
+    src: url('fonts/modeg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/modeg-webfont.woff2') format('woff2'),
+         url('fonts/modeg-webfont.woff') format('woff'),
+         url('fonts/modeg-webfont.ttf') format('truetype'),
+         url('fonts/modeg-webfont.svg#mode_gregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+@font-face {
+  font-family: 'Eagle-Book';
+  src: url('fonts/Eagle-Book.eot?#iefix') format('embedded-opentype'),  url('fonts/Eagle-Book.otf')  format('opentype'),
+	     url('fonts/Eagle-Book.woff') format('woff'), url('fonts/Eagle-Book.ttf')  format('truetype'), url('fonts/Eagle-Book.svg#Eagle-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Museo-700';
+  src: url('fonts/Museo-700.eot?#iefix') format('embedded-opentype'),  url('fonts/Museo-700.otf')  format('opentype'),
+	     url('fonts/Museo-700.woff') format('woff'), url('fonts/Museo-700.ttf')  format('truetype'), url('fonts/Museo-700.svg#Museo-700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans-100';
+  src: url('fonts/MuseoSans-100.eot?#iefix') format('embedded-opentype'),  url('fonts/MuseoSans-100.otf')  format('opentype'),
+	     url('fonts/MuseoSans-100.woff') format('woff'), url('fonts/MuseoSans-100.ttf')  format('truetype'), url('fonts/MuseoSans-100.svg#MuseoSans-100') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans-300';
+  src: url('fonts/MuseoSans-300.eot?#iefix') format('embedded-opentype'),  url('fonts/MuseoSans-300.otf')  format('opentype'),
+	     url('fonts/MuseoSans-300.woff') format('woff'), url('fonts/MuseoSans-300.ttf')  format('truetype'), url('fonts/MuseoSans-300.svg#MuseoSans-300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans-500';
+  src: url('fonts/MuseoSans-500.eot?#iefix') format('embedded-opentype'),  url('fonts/MuseoSans-500.otf')  format('opentype'),
+	     url('fonts/MuseoSans-500.woff') format('woff'), url('fonts/MuseoSans-500.ttf')  format('truetype'), url('fonts/MuseoSans-500.svg#MuseoSans-500') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans-500Italic';
+  src: url('fonts/MuseoSans-500Italic.eot?#iefix') format('embedded-opentype'),  url('fonts/MuseoSans-500Italic.otf')  format('opentype'),
+	     url('fonts/MuseoSans-500Italic.woff') format('woff'), url('fonts/MuseoSans-500Italic.ttf')  format('truetype'), url('fonts/MuseoSans-500Italic.svg#MuseoSans-500Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans-700';
+  src: url('fonts/MuseoSans-700.eot?#iefix') format('embedded-opentype'),  url('fonts/MuseoSans-700.otf')  format('opentype'),
+	     url('fonts/MuseoSans-700.woff') format('woff'), url('fonts/MuseoSans-700.ttf')  format('truetype'), url('fonts/MuseoSans-700.svg#MuseoSans-700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSans-900';
+  src: url('fonts/MuseoSans-900.eot?#iefix') format('embedded-opentype'),  url('fonts/MuseoSans-900.otf')  format('opentype'),
+	     url('fonts/MuseoSans-900.woff') format('woff'), url('fonts/MuseoSans-900.ttf')  format('truetype'), url('fonts/MuseoSans-900.svg#MuseoSans-900') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);*/
+
+
+
+
+#fancybox-title-over{
+    display: none !important;
+}
+/******* GENERAL *******/
+*[class*="col-"]{
+	
+}
+
+*{
+	/*font-family: 'Montserrat', Arial, Helvetica, sans-serif;*/
+	font-family: 'MuseoSans-500';
+}
+* i:not(.fa), * em{
+	font-family: 'MuseoSans-500Italic';
+}
+img{
+	max-width: 100%;
+	/*height: auto;*/
+}
+.page-template-page-contacts img{
+    height: auto;
+}
+.home #categories aside img{
+    height: auto;
+}
+a{
+	/*color: rgb(158,75,40);*/
+	color: #fff;
+}
+a:focus, a:hover{
+	/*color: rgba(158, 75, 40,.8);*/
+        color: #2C759E;
+}
+a:focus{
+	outline: none; 
+}
+
+#content ul, #subcontent ul{
+    padding-left: 15px;
+}
+#content li, #subcontent li{
+    padding-left: 10px !important;
+    position: relative;
+    list-style: none;
+    margin-bottom: 10px;
+}
+.page-template-default #content li:before,.page-template-default #subcontent li:before{
+    content: ""; /*  */
+    font-family: FontAwesome;
+    position: absolute;
+    left: -15px;
+    font-size: .65em;
+    color: #2C759E;
+}
+body{
+	background-color: #fff;
+}
+
+.container > .row,.container-fluid > .row{
+	
+}
+body:not(.home){
+	margin-top: 70px;
+}
+
+blockquote {
+    border-left: none;
+    position:relative;
+    padding: 10px 40px;
+    font-size: 1.1em;
+}
+blockquote:before{
+	/*content: '"';*/
+	content: "";
+	color: rgba(158,75,40,.8);
+	font-size: 1.6em;
+	left: 0;
+	top: 5px;
+	position:absolute;
+	font-family: FontAwesome;
+}
+blockquote:after{
+	/*content: '"';*/
+	content: "";
+	color: rgba(158,75,40,.8);
+	font-size: 1.6em;
+	right: 0;
+	bottom: 5px;
+	position:absolute;
+	font-family: FontAwesome;
+}
+h1,h2,h3{
+	font-weight: 100;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	/*font-family: 'Eagle-Book';*/
+	font-family: 'MuseoSans-700';
+	text-transform:uppercase;
+}
+h2{
+	font-size: 28px;
+}
+h4,h5,
+#title,#title span, .nav > li > a{
+	font-weight: 400;
+}
+h1 a, h2 a, h3 a{
+	/*font-family: 'Eagle-Book';*/
+	font-family: 'MuseoSans-700';
+}
+button, input, optgroup, select, textarea{
+    font-family: 'MuseoSans-100';
+}
+.single h1,.single  h2,.single  h3{
+    margin-bottom: 0;
+}
+.single h1,.single h3{
+    margin: 10px 0;
+}
+.single h2,.single h3,.single h4 a{
+    font-family: 'MuseoSans-300';
+}
+.single h4 i.fa{
+    font-size: .8em;
+}
+.single h1,.single  h2,.single  h3, .page-template-default h1, .page h1{
+    color: #fff;
+}
+.single h4,.single h4 a{
+    color: #999;
+}
+.page-template #masonry article>div,.page-template .masonry article>div{
+	height: 90px;
+	overflow:hidden;
+	margin-bottom:15px;
+	position:relative;
+}
+.page-template #masonry article>div>.menuRef,.page-template .masonry article>div>.menuRef{
+	position:absolute;
+	bottom:0;
+}
+.page-template #masonry article h3,.page-template .masonry article h3{
+	font-size: 1em;
+	margin: 15px 0;
+}
+/* *:not(#events) i.fa{
+ 	color: rgb(158,75,40);
+ }*/
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignleft {
+	float: left;
+	margin-right: 15px;
+}
+.alignright {
+	float: right;
+	margin-left: 15px;
+}
+#breadcrumbs{
+	margin: 15px 0;
+	text-transform: uppercase; 
+	/*background-color: #000;*/
+	border-radius: 0;
+	/*color: #fff;*/
+	font-size: 90%;
+	color: #999;
+	background-color: transparent;
+        letter-spacing: 0.05em;
+}
+#breadcrumbs a {
+	transition: 0.3s ease;
+	line-height: 0;
+	/*color: #fff;*/
+	/*border-bottom: 2px solid #fff;*/
+	padding: 2px 0;
+	color: #999;
+}
+#breadcrumbs i.fa-compass{
+	color:rgb(158,75,40);
+	font-size: 1.2em;
+}
+#breadcrumbs i.fa-chevron-right{
+	font-size: .8em;
+}
+#breadcrumbs a:hover, #breadcrumbs a:focus {
+	/*border-bottom: 2px solid #000;*/
+	text-decoration: none;
+	padding: 10px 0;
+}
+
+dl.list-group dd ul{
+	padding: 0;
+	list-style: none;
+}
+
+.widget_sidebar .owl-controls.clickable > .owl-pagination{
+	display: none;
+}
+#menu-principal li:first-child a:before{
+    content: url(images/logo12.png);
+    margin-right: 10px;
+}
+/*************** Listes *************/
+ul#menu-les-lieux > li, 
+.widget_sidebar ul > li, .list-group ul > li,.widget_sidebar ol > li {
+	transition: 0.3s ease;
+	border-left: 0 none;
+	padding-left: 0;
+	padding-right: 10px;
+	margin-bottom: 10px;
+}
+ul#menu-les-lieux > li:hover, 
+.widget_sidebar ul > li:hover, .list-group ul > li:hover,.widget_sidebar ol > li:hover {
+	border-left: 5px solid rgb(158,75,40);
+	padding-left: 5px;
+	padding-right: 0;
+}
+ul#menu-les-lieux > li a, 
+.widget_sidebar ul > li > a, .list-group ul > li > a,.widget_sidebar ol > li > h4 a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+	/*width: 100%;*/
+	/*display: block;*/
+	display: inline-block;
+}
+.list-group ul > li > a.see{
+	margin-left: 15px;
+	font-size: 1.5em;
+}
+.list-group .list-group-item:last-child {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.list-group .list-group-item{
+	border: 1px solid #000;
+}
+
+
+ul#menu-les-lieux li a:hover {
+  background-color: #fff;
+}
+.home section > header > h1,.page .container header h1, .single .container header h1,.single .container header h2, .single-tribe_events article > header h1,.tax-lieux section > header h1, .tax-tagexpo section > header h1{
+	text-align: center;
+}
+.page-template-page-pratique .container article header h1{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+@media screen and (min-width: 768px){
+	.page div.container header h1, .single div.container header h1{
+		font-size: 3.5em;
+	}
+	.tax-categorie div.container section.row h1{
+		text-align:center;
+	}
+	.home div.container section.row{
+		margin-top: 25px;
+	}
+	.tax-categorie div.container section#slider picture{
+		display: block;
+		text-align: center;
+		padding-top: 115px;
+	}
+        .tax-categorie .carousel-indicators{
+            bottom: -40px;
+        }
+	.single-realisation div.container section#slider picture{
+		display: block;
+		text-align: center;
+	}
+	.tax-categorie .carousel-caption, .single-realisation .carousel-caption{
+		width: 100%;
+		top:0;
+		bottom:inherit;
+		left:0;
+		right:0;
+		background-color: transparent;
+		padding:0;
+		color: #333;
+		text-shadow: none;
+	}
+	.tax-categorie .carousel-caption h3 a,.single-realisation .carousel-caption h3 a{
+		color:#333;
+	}
+	.tax-categorie #slider .carousel-control.left,.tax-categorie #slider .carousel-control.right,
+		.single-realisation #slider .carousel-control.left,.single-realisation #slider .carousel-control.right{ 
+		background: none;
+	}
+	.tax-categorie #slider .carousel-control .glyphicon-chevron-right, .tax-categorie #slider .carousel-control .icon-next, .tax-categorie #slider .carousel-control .glyphicon-chevron-left, .tax-categorie #slider .carousel-control .icon-prev,
+	.single-realisation #slider .carousel-control .glyphicon-chevron-right,.single-realisation #slider .carousel-control .icon-next,.single-realisation #slider .carousel-control .glyphicon-chevron-left,.single-realisation #slider .carousel-control .icon-prev{
+		color: #999;
+	}
+	.tax-categorie #slider .carousel-indicators li,.single-realisation #slider .carousel-indicators li{
+		box-shadow: 0 0 3px #000;
+	}
+	.home div.container section:not(#categories).row:after{
+		content:'';
+		display: block;
+		height: 40px;
+		/*border-bottom: 5px double #afafaf;*/
+		/*background-color: #fff;*/
+	}
+	body > footer .row:before{
+            /*border-top: 1px solid #afafaf;*/
+            content:url('images/zigouigoui.png');
+            display: block;
+            height: 28px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+	}
+	.home div.container section#socialmedia.row:after{
+		border-top: 15px solid #000;
+	}
+	/*.home div.container section.row:first-of-type{
+		margin-top:0;
+	}*/
+}
+/*************** header *************/
+body > header {
+	margin-top: 98px;
+        margin-bottom: 25px;
+}
+#title{
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000;
+	font-family: 'Eagle-Book';
+}
+#title span{
+	font-size: 6.2em;
+	display: block;
+	margin-top: 70px;
+	/*color: rgb(158,75,40);*/
+	line-height: 1em;
+	font-family: 'Eagle-Book';
+}
+#logo{
+	padding: 0;
+        text-align: center;
+}
+
+@media screen and (min-width: 768px){
+	body > nav.navbar-default{
+		background-color: #000;
+		margin: 0 0 15px 0;
+		border: 0;
+		border-radius:0;
+		padding-left:0;
+		padding-right:0;
+		position: fixed;
+		width: 100%;
+		z-index: 10000;
+		top: 0;
+	}
+        body > nav.navbar-default >.container{
+            margin-top: 6px;
+        }
+	.navbar{
+		min-height:70px;
+	}
+	.container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header{
+		margin-right: -30px;
+		margin-left: -30px;
+	}
+	.navbar-default .navbar-nav > li > a {
+	    padding: 19px 0;
+            text-transform:uppercase;
+            color:#fff;
+            background-color: #000;
+            transition: 0.3s ease;
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            margin: 0 15px;
+	}
+        .navbar-default .navbar-nav.social-links > li > a{
+            margin: 0 11px;
+        }
+	#localisation.navbar-default .navbar-nav > li > a, #categories.navbar-default .navbar-nav > li > a{
+		background: none;
+		border: none;
+		color: #fff;
+		padding: 0;
+	}
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a, 
+	.navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+		background-color: #000;
+		color: #2C759E;
+		/*border-top: 2px solid #ffffff;
+		border-bottom: 2px solid #ffffff;*/
+		padding:  0;
+		margin: 19px 15px;
+	}
+        .navbar-default .navbar-nav.social-links > li > a:hover, .navbar-default .navbar-nav.social-links > .active > a, 
+        .navbar-default .navbar-nav.social-links > .active > a:focus, .navbar-default .navbar-nav.social-links > .active > a:hover{
+            margin: 19px 11px;
+        }
+	#localisation.navbar-default .navbar-nav > li > a:hover,#localisation.navbar-default .navbar-nav > li > a.on, #categories.navbar-default .navbar-nav > li > a:hover, #categories.navbar-default .navbar-nav > li > a.on{
+		margin: 0 15px;
+		text-decoration:underline;
+	}
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+		background-color: #000;
+		color: #fff;
+		border-color: #fff;
+	}
+
+	.navbar-default .navbar-nav .dropdown-menu {
+		/*background-color: #000;*/
+		background-color: rgba(0, 0, 0, 0.8);
+		border: 1px solid #fff;
+	}
+	.navbar-default .navbar-nav .dropdown-menu li a {
+		color: #fff;
+	}
+	.navbar-default .navbar-nav .dropdown-menu li a:hover {
+		background-color: #fff;
+		color: #000;
+	}
+	.navbar-default .navbar-nav .dropdown-menu li.active a {
+		background-color: #fff;
+		color: #000;
+	}
+	.navbar-default .navbar-nav .dropdown-menu li.active a:hover {
+		/*border-left: 4px solid #000;*/
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+/*********************** BOUTON *******************/
+.btn-default, input[type="submit"],.pager li > a, .pager li > span,.post-type-archive-tribe_events #tribe-events .tribe-events-button,.post-type-archive-tribe_events .tribe-events-button {
+	transition: 0.15s ease;
+	background-color: #000;
+	border: 1px solid #000;
+	color: #fff;
+	border-radius: 0;
+	padding: 5px 10px;
+}
+.btn-default:hover, input[type="submit"]:hover,.pager li > a:hover, .pager li > span:hover,.post-type-archive-tribe_events #tribe-events .tribe-events-button:hover,.post-type-archive-tribe_events .tribe-events-button:hover {
+	background-color: #fff;
+	color: #000;
+}
+.btn.active, .btn:active,.pager li > a:active, .pager li > span:active,.post-type-archive-tribe_events #tribe-events .tribe-events-button:active,.post-type-archive-tribe_events .tribe-events-button:active {
+  box-shadow: none;
+}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover,
+.btn-default.focus:active, .btn-default:active:focus, .btn-default:active:hover,
+.open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, 
+.open > .dropdown-toggle.btn-default:hover,
+.pager li > a:focus, .pager li > span:focus,.post-type-archive-tribe_events #tribe-events .tribe-events-button:focus,.post-type-archive-tribe_events .tribe-events-button:focus,
+.pager li > a:active, .pager li > span:active,.post-type-archive-tribe_events #tribe-events .tribe-events-button:active,.post-type-archive-tribe_events .tribe-events-button:active{
+  	background-color: #fff;
+	color: #000;
+  
+}
+
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+    outline: medium none;
+    outline-offset: 0;
+}
+
+.searchform .input-group-btn {
+	background-color: #000;
+}
+
+/*********************** FORMS *******************/
+.form-control {
+	/*border-radius: 0;
+	border: 1px solid #000;*/
+}
+
+input, textarea {
+	border: 1px solid #000;
+}
+
+form.wpcf7-form input, form.wpcf7-form textarea {
+ /*width: 100%;*/
+}
+
+/*********************** SLIDER *******************/
+.carousel-caption{
+	background-color: rgba(0,0,0,.8);
+	color: #fff;
+}
+.carousel-caption a{
+	color: #fff;
+}
+.carousel-caption a.btn{
+	margin-right: 15px;
+	border: 1px solid #fff;
+    color: #fff;
+}
+.carousel-caption a.btn:hover {
+	color: #000;
+}
+/************************ ACCUEIL ****************/
+
+.home section#categories aside{
+	position: relative;
+        margin-top: 30px;
+}
+.home section#categories aside h2{
+	position: absolute;
+	top: 4px;
+	color: #fff;
+	text-align:center;
+	width: calc(100% - 30px);
+        text-shadow: 0 0 5px #000;
+        font-family: "MuseoSans-300";
+        font-size: 20px;
+        letter-spacing: 0.05em;
+}
+
+.home #socialmedia{
+	background-color: #000;
+	padding-top: 15px;
+}
+.home #socialmedia > h3{
+	margin-top: 0;
+}
+.home #socialmedia *{
+	color: #fff;
+}
+.home #socialmedia .owl-theme .owl-controls .owl-buttons div{
+	background-color: #fff;
+	color: #333;
+	opacity: 1;
+}
+.home #categories:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.home section#categories aside figure{
+    position: relative;
+}
+
+.home section#categories aside figure picture.survol img{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.home section#categories aside figure picture img{
+    transition: opacity 2s ease;
+}
+.home section#categories aside figure.survol picture img{
+    transition: opacity .5s ease;
+}
+.home section#categories aside:hover figure picture img{
+    opacity: 0;
+}
+.home section#categories aside:hover figure picture.survol img{
+    opacity: 1;
+}
+
+.home #realisations article{
+    position: relative;
+}
+.home #realisations article header{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 100%;
+    /*background-color: rgba(21,49,77,.7);*/
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity .5s ease-in;
+    box-sizing: border-box;
+    margin: 0 15px;
+    padding: 23px;
+}
+.home #realisations article header *{
+    color: rgba(169,234,252,1);
+}
+.home #realisations article header h1{
+    font-size: 1.2em;
+    /*padding-top: 10px;
+    border-top: 2px solid rgba(169,234,252,1);*/
+    position: absolute;
+    top: 50%;
+    margin-top: -.6em;
+    width: calc(100% - 46px);
+}
+.home #realisations article header h1::before {
+    border-top: 2px solid rgba(169, 234, 252, 1);
+    content: "";
+    display: block;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.home #realisations article header h2{
+    font-size: 1.2em;
+    font-weight: normal;
+    font-family: "MuseoSans-300";
+    text-transform:none; 
+    position: absolute;
+    top: 30%;
+    width: calc(100% - 46px);
+}
+.home #realisations article header h2.lignes{
+    top: 26%;
+}
+.home #realisations article header h3{
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "MuseoSans-300";
+    text-transform:none; 
+    position: absolute;
+    top: 55%;
+    width: calc(100% - 46px);
+}
+.home #realisations article:hover header{
+    opacity: 1;
+}
+.home #realisations article header .menuRef{
+    font-size: .8em;
+    font-weight: normal;
+    font-family: "MuseoSans-300";
+    text-transform:none; 
+    position: absolute;
+    bottom: 23px;
+}
+.home #realisations:after{
+    content:"";
+    display: block;
+    margin:15px;
+    border-bottom: 1px rgba(255,255,255,.5) solid;
+}
+
+
+
+/************************* PAGE ******************/
+.home section > header > h1,
+.page .container > section > header > h1,
+.tax-categorie .container > section > header > h1,
+.page div.container header h1,
+.single div.container header h1{
+    font-size: 1.8em;
+    font-family: "MuseoSans-300";
+    color: #fff;
+    letter-spacing: 0.1em;
+}
+.tax-categorie .container > section#slider h3 a{
+    font-family: "MuseoSans-300";
+    color: #fff;
+}
+.page #breadcrumbs,.archive #breadcrumbs{
+    text-align: center;
+}
+.page #localisation.navbar-default,.tax-categorie #localisation.navbar-default{
+    background-color: transparent;
+    border: none;
+    height: auto;
+    min-height: auto;
+}
+.page #masonry article,.page .masonry article{
+    position: relative;
+    margin-bottom: 15px;
+}
+.page #masonry article header,.page .masonry article header,.tax-tagexpo aside article .thumbnail header{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 100%;
+    /*background-color: rgba(21,49,77,.7);*/
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity .5s ease-in;
+    box-sizing: border-box;
+    margin: 0 15px;
+    padding: 23px;
+}
+.page-template-page-references #masonry article header,.page-template-page-ref .masonry article header{
+    opacity:1;
+    background-color: transparent;
+}
+.page-template-page-ref .masonry:before{
+	content:"";
+	width: calc(100% - 30px);
+	margin: 0 15px 30px;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.tax-tagexpo .thumbnail{
+    padding: 0;
+    overflow: hidden;
+}
+.tax-tagexpo aside article .thumbnail img{
+    height: auto;
+    transition: transform .5s ease;
+}
+.tax-tagexpo aside article .thumbnail img:hover{
+    transform: scale(1.05);
+}
+.tax-tagexpo section > header h1, .tax-tagexpo aside article .thumbnail header h1, .tax-tagexpo section > aside h3{
+    color: #fff;
+    font-family: "MuseoSans-300";
+    text-align: center;
+}
+.tax-tagexpo section > aside h3{
+    letter-spacing: 0.06em;
+}
+.tax-tagexpo  section #slides{
+    margin-top: 15px;
+}
+.page #masonry article header *,.page .masonry article header *{
+    color: rgba(169,234,252,1);
+    text-align: left;
+}
+.page #masonry article header h1,.page .masonry article header h1{
+    font-size: 1.2em;
+    position: absolute;
+    top: 40%;
+    margin-top: -.6em;
+    width: calc(100% - 46px);
+}
+.page #masonry article header h1:after,.page .masonry article header h1:after{
+    border-bottom: 2px solid rgba(169,234,252,1);
+    content:"";
+    display: block;
+    padding-bottom: 10px;
+    width: 50%;
+}
+.page #masonry article header h2,.page .masonry article header h2{
+    font-size: 1.2em;
+    font-weight: normal;
+    font-family: "MuseoSans-300";
+    text-transform:none; 
+    position: absolute;
+    top: 40%;
+    width: calc(100% - 46px);
+}
+.page-template-page-references #masonry article header h2,.page-template-page-ref .masonry article header h2{
+    border-top: 1px solid #fff;
+    margin-top: 0;
+    padding-top: 30px;
+    text-align: center;
+    top: 60%;
+    color:#fff;
+}
+/*.page-template-page-ref .masonry article header h2{
+	font-size: 0.9em;
+    padding: 22px 0 0 0;
+    top: 50%;
+}*/
+.page #masonry article header h2.lignes, .page .masonry article header h2.lignes{
+    top: 40%;
+}
+.page #masonry article header h1.lignes,.page .masonry article header h1.lignes{
+    top: 33%;
+}
+.page #masonry article header h3,.page .masonry article header h3{
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "MuseoSans-300";
+    text-transform:none; 
+    position: absolute;
+    bottom: 23px;
+    width: calc(100% - 46px);
+}
+.page #masonry article:hover header,.page .masonry article:hover header,.tax-tagexpo aside article:hover .thumbnail header{
+    opacity: 1;
+}
+.page #masonry article header .menuRef,.page .masonry article header .menuRef{
+    font-size: .8em;
+    font-weight: normal;
+    font-family: "MuseoSans-300";
+    text-transform:none; 
+    position: absolute;
+    top: 23px;
+}
+
+.page-template-page-presentation #lieux {
+	padding: 0;
+	border: 1px solid #000;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.page-template-page-presentation #lieux h3{
+	margin-top: 0;
+	font-size: 1.1em;
+	background-color: #000;
+	color: #fff;
+	padding: 10px 15px;
+}
+.page-template-page-presentation #lieux > div {
+	padding: 0 15px;
+}
+.page-template-page-presentation #lieux ul#menu-les-lieux{
+	padding-left: 0;
+}
+.page-template-page-presentation #lieux ul#menu-les-lieux li{
+	width: 100%;
+}
+.page-template-page-presentation #lieux ul#menu-les-lieux li > a{
+	padding: 5px 0;
+}
+.page section > header,.single section > article > header, .single-tribe_events article > header, .tax-lieux section > header, .tax-tagexpo section > header,.tax-categorie section > header{
+	position:relative;
+	min-height: 100px;
+}
+.single-tribe_events article > header h2{
+	position:absolute;
+	color: #fff;
+	top: 30px;
+	left: 45px;
+	font-size: 1.8em;
+	font-family: "MuseoSans-300";
+}
+.single-tribe_events article > header .tribe-events-event-image{
+	margin-bottom: 0;
+}
+#tribe-events-content{
+	padding: 0;
+}
+.page-template-page-presentation #map,.page-template-page-presentation #lieux{
+	margin-top: 30px;
+}
+.home .widget_sidebar h3:first-child,
+.page .widget_sidebar h3:first-child,
+.single .widget_sidebar h3:first-child{
+	margin-top: 0;
+	font-size: 18px;
+}
+.page:not(.page-template-default) main, .page #plus{
+	margin-top: 15px;
+}
+.page main > h2:first-child,.page main > h3:first-child,.page main > h4:first-child{
+	margin-top: 0;
+}
+.page-template-page-pratique [class*=col-] h2:first-child,.page-template-page-pratique [class*=col-] h3:first-child, .page-template-page-pratique main{
+	margin-top: 0;
+}
+.page-template-page-pratique main article{
+	display: flex;
+}
+.page-template-page-pratique main article:not(:last-child){
+	padding-bottom: 15px;
+	border-bottom: 1px solid #9c9e9f;
+}
+.page-template-page-pratique .container main article header h1{
+	background-color: transparent;
+	font-size: 1.5em;
+}
+.page-template-page-pratique .container main article:not(:first-child) header h1{
+	margin-top: 15px;
+}
+.page-template-page-pratique .container main article > div time{
+	margin-bottom: 10px;
+	display: block;
+}
+.page-template-page-pratique .container main article:not(:first-child) > div time{
+	margin-top: 15px;
+	display: block;
+}
+@media screen and (min-width: 768px){
+	.page-template-page-boutique .container article{
+		display: flex;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+	.page-template-page-boutique .container article .price{
+		display:block;
+		margin-top: 15px;
+	}
+}
+.page-template-page-boutique .container article:not(:last-child){
+	padding-bottom: 15px;
+	border-bottom: 1px solid #9c9e9f;
+}
+.page-template-page-boutique .container article:not(:first-child){
+	margin-top: 15px;
+}
+.page-template-page-boutique .container article header h1{
+	background-color: transparent;
+	margin: 0 0 15px;;
+	font-size: 2em;
+	padding: 0;
+	color: rgb(158, 75, 40);
+}
+.page-template-page-boutique .container article .prix{
+	/*display: flex;*/
+	margin-top: 15px;
+}
+.page-template-page-boutique .container article .label-danger{
+	background-color: rgb(158, 75, 40);
+	font-size: 1.2em;
+	margin-right: 15px;
+}
+.page-template-page-pro #plus i.fa{
+	width: 20px;
+}
+
+/*.page-template-page-realisations #masonry article a:not(:first-of-type):before{
+	content: " / ";
+}*/
+/************************* SINGLE ******************/
+.single h1, .single h2, .single h3, .single h4, .single #breadcrumbs{
+    text-align: center;
+}
+.single #content,.single #subcontent aside, .page-template-default #content, .page-template-default #subcontent aside, .tax-tagexpo #subcontent aside{
+    display: inline-flex;
+}
+.single #subcontent aside,.page-template-default #subcontent aside, .tax-tagexpo #subcontent aside, .single aside#slideshow{
+    margin-top: 15px;
+}
+.single #content img,.single #subcontent img,.page-template-default #content img,.page-template-default #subcontent img, .tax-tagexpo #subcontent img{
+    height: auto;
+}
+.single #content main,.single #subcontent main, .page-template-default #content main, .page-template-default #subcontent main, .tax-tagexpo #subcontent main{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tax-tagexpo section main{
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+}
+.single #content main > div,.single #subcontent main > div{
+    /*width: 95%;*/
+    margin: auto 30px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+.page-template-default #content main > div,.page-template-default #subcontent main > div{
+    margin: auto 60px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+body:not(.page-template-default) #content figure {
+    padding-left: 0;
+}
+.page-template-default #content figure {
+    padding-left: 0;
+}
+body:not(.page-template-default) #subcontent aside:nth-child(even) figure {
+    padding-right: 0;
+}
+body:not(.page-template-default) #subcontent aside:nth-child(odd) figure {
+    padding-left: 0;
+}
+.page-template-default #subcontent aside:nth-child(even) figure {
+    padding-left: 0;
+}
+.page-template-default #subcontent aside:nth-child(odd) figure {
+    padding-right: 0;
+}
+body.single-realisation #subcontent aside:nth-child(even) figure{
+    padding-left: 0;
+    padding-right: 15px;
+}
+body.single-realisation #subcontent aside:nth-child(odd) figure{
+    padding-right: 0;
+    padding-left: 15px;
+}
+body.tax-tagexpo #subcontent aside:nth-child(odd) figure {
+    padding-right: 0;
+    padding-left: 15px;
+}
+body.tax-tagexpo #subcontent aside:nth-child(even) figure {
+    padding-right: 15px;
+    padding-left: 0;
+}
+.single #otherpost{
+    background-color: #000;
+    color: #4c5260;
+    text-align: center;
+    margin: 0 15px;
+    padding: 5px 0;
+    font-size: 2em;
+    width: calc(100% - 30px);
+}
+.single #otherpost{
+    font-size: 1em;
+    margin-top:15px;
+}
+.single #otherpost a{
+    color: #4c5260;
+    line-height: 3em;
+}
+.single #otherpost a i{
+    font-size: 1.5em;
+    position: relative;
+    top: 2px;
+}
+.single #otherpost a:first-child i{
+    margin-right: 5px;
+}
+.single #otherpost a:last-child i{
+    margin-left: 5px;
+}
+.single #share div:not(.tooltip-inner){
+    font-size:1.6em;
+    text-align: center;
+}
+.single #share div a{
+    margin: 0 5px;
+    /*color: #4c5260;*/
+    color: #000;
+}
+.single #share div a:last-of-type{
+    margin-right: 0;
+}
+.single #share div i.link{
+    cursor: pointer;
+    margin-right: 5px;
+    /*color:rgba(76, 82, 96,.8);*/
+    color: rgba(0,0,0,.8);
+    font-size: .9em;
+}
+.single-realisation article h2 a{
+    /*font-family: "MuseoSans-500";*/
+    font-family: "MuseoSans-300";
+    font-size: 0.75em;
+}
+.single-realisation article h2 a:hover{
+    color: #fff;
+}
+.single-realisation article h3{
+    font-size: 1.3em;
+}
+.single-realisation .tooltip.bottom .tooltip-inner{
+    font-size: .33em;
+    font-family: "MuseoSans-300";
+}
+.single-realisation ul.social-links .tooltip.bottom .tooltip-inner{
+    font-size: 1em;
+}
+/************************* UNE / events ******************/
+#events h2, #events li:first-child h3{
+	margin-top: 0;
+}
+#events ul{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+#events a{
+	color:#fff;
+}
+.home #events article{
+	margin-bottom: 25px;
+}
+.home #events article:last-child{
+	margin-bottom: 0;
+}
+.home #events article picture{
+	padding-right: 0;
+}
+.home #events article h1{
+	font-size: 1.5em;
+	margin: 10px 0;
+}
+.home #events article time{
+	font-size: .8em;
+	/*border-bottom: 1px solid #fff;*/
+	color: #fff;
+	display: block;
+	/*padding-bottom: 10px;*/
+	position:relative;
+}
+.home #events article time span{
+	padding: 0 2% 0 0;
+	background-color: #000;
+	z-index: 2;
+	position: relative;
+}
+.home #events article time:after{
+	border: 1px solid #eee;
+	content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1;
+}
+.single article main time{
+	margin-bottom:15px;
+	display:block;
+}
+/************************ ARCHIVES *****************/
+.archive section, .single section, .page section, .post-type-archive-tribe_events > div.container, .single-tribe_events > div.container{
+	margin-bottom: 15px;
+}
+.archive section:not(#day):after, .single section:after, .page section:after, .post-type-archive-tribe_events > div.container section.row:after, .single-tribe_events > div.container section.row:after,.single-tribe_venue > div.container div.tribe-events-venue.row:after{
+	background-color: #fff;
+	/*border-bottom: 1px solid #afafaf;*/
+	content: "";
+	display: block;
+	/*height: 25px;*/
+}
+.single-tribe_venue > div.container div.tribe-events-venue.row{
+	margin-bottom: 15px;
+}
+.post-type-archive-tribe_events .tribe-events-day .tribe-events-day-time-slot h5{
+	background-color: rgba(158, 75, 40,1);
+}
+
+.category article h1{
+	margin-top: 0;
+	font-size: 1.3em;
+}
+.category article{
+	margin-bottom: 15px;
+}
+.category article header time{
+	position:absolute;
+	font-family: "MuseoSans-700";
+	top: 15px;
+	right: 0;
+}
+.category article header time i.fa{
+	color: rgb(158, 75, 40);
+}
+.category article:last-child{
+	margin-bottom: 0;
+}
+
+.archive aside article .thumbnail {
+	border-radius: 0;
+	border: 1px solid #000;
+}
+.archive aside article .thumbnail a.btn {
+	border-radius: 0;
+	width: 100%;
+	background-color: #000;
+	border: 1px solid #000;
+	color: #fff;
+	padding: 10px;
+}
+.archive aside article .thumbnail a.btn:hover {
+	background-color: #fff;
+	color: #000;
+}
+/************************ INFOS *****************/
+
+/******************** EDITO *********************/
+
+/******************** VIDEO *********************/
+
+/******************** PLUS **********************/
+
+/**************** EVENTS ********************/
+.single-tribe_events #tribe-events-pg-template,.post-type-archive-tribe_events #tribe-events-pg-template,.single-tribe_venue #tribe-events-pg-template,.archive.events-list #tribe-events-pg-template{
+	max-width: 100%;
+}
+.single-tribe_events .container .tribe-events-venue-map{
+	width: 100%;
+	margin: 0;
+}
+.events-list #tribe-events-footer, .single-tribe_events .container #tribe-events-footer, .tribe-events-day #tribe-events-footer, .tribe-events-map #tribe-events-footer, .tribe-events-photo #tribe-events-footer{
+	border: none;
+}
+.archive.events-list div.container article:not(:last-child),.single-tribe_venue div.container article:not(:last-child){
+	margin-bottom: 30px;
+}
+.archive.events-list div.container article header h1,.single-tribe_venue div.container article header h1{
+	font-size: 1.8em;
+	max-width: 100%;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+.archive.events-list div.container article h2,.single-tribe_venue div.container article h2{
+	font-size: 1.2em;
+	margin: 5px 0;
+}
+.archive.events-list #tribe-events-content section::after{
+	border: none;
+}
+
+
+.post-type-archive-tribe_events #tribe-bar-form .tribe-bar-submit input[type="submit"]{
+	font-size:11px;
+}
+.tribe-events-notices{
+	clear: both;
+}
+.post-type-archive-tribe_events article{
+	margin-bottom: 15px;
+}
+.post-type-archive-tribe_events article h1.tribe-events-list-event-title{
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 1.3em;
+}
+.post-type-archive-tribe_events article h2{
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-size: 1.1em;
+}
+.single-tribe_venue article[id^=post-] header h1{
+	background-color: transparent;
+	font-size: 1.8em;
+	margin: 0;
+	padding: 0;
+}
+.single-tribe_venue article[id^=post-] header h2{
+	font-size: 1.2em;
+	margin-top: 15px;
+}
+.single-tribe_venue .tribe-events-venue-meta > h1 i.fa,.single-tribe_venue article[id^=post-] header h2 i.fa, .single-tribe_events .lieu i.fa{
+	color: rgb(158, 75, 40);
+}
+.post-type-archive-tribe_events #tribe-events-content section:after{
+	border-bottom: none;
+}
+/************* OEUVRES & LIEUX */
+.container [id*=gallery-].gallery, #gallery-2.gallery{
+	border: 1px solid #000;
+	margin: 15px 0;
+    padding: 15px 0;
+}
+#gallery-2 .gallery-item{
+	padding-right: 5px;
+}
+#gallery-2 img{
+	border: none !important;
+}
+.tax-lieux article{
+	/*height: 320px;*/
+}
+.tax-lieux header div.vertical,.single-oeuvre header div.vertical, .single-tribe_events header div.vertical{
+	height: 191px;
+}
+.tax-lieux header div.vertical h1{
+	line-height: 191px;
+	margin: 0;
+}
+.single-oeuvre header div.vertical h1, .single-tribe_events header div.vertical h1{
+	line-height: normal;
+	margin: 0;
+	margin-top: 55px;
+	margin-bottom: 15px;
+}
+.single-oeuvre header div.vertical h2, .single-tribe_events header div.vertical h2{
+	line-height: normal;
+	margin: 0;
+}
+.single-oeuvre article h2{
+	font-size: 1em;
+	font-style: italic;
+	color: rgb(158, 75, 40);
+}
+.single-oeuvre article h2 .fa{
+	font-size: 1.6em;
+}
+.tax-lieux article figure{
+	height: 189px;
+}
+.tax-lieux article figure i.fa,.tax-tagexpo article figure i.fa{
+	font-size: 11em;
+	/*color: rgb(158,75,40);*/
+}
+.tax-lieux article h1,.tax-tagexpo article h1{
+	font-size: 1.2em;
+	font-weight: normal;
+	text-transform:uppercase;
+}
+.tax-lieux article h1.longtitre,.tax-tagexpo article h1.longtitre{
+	font-size: .81em;
+}
+.tax-lieux article .thumbnail .caption{
+	height: 86px;
+}
+.tax-tagexpo article .thumbnail .caption{
+    height: calc(100% - 20px);
+}
+.page-template-page-oeuvres main{
+	margin-bottom: 30px;
+}
+.page-template-page-oeuvres main div h2{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.page-template-page-oeuvres main div aside{
+	font-size: 2em;
+	line-height: 50px;
+}
+.page-template-page-oeuvres main div aside i.fa-plus-square:hover::before{
+	content: "";
+}
+.page-template-page-oeuvres main.panel-default > .panel-heading{
+	background-color: transparent;
+}
+.page-template-page-oeuvres main:after{
+	/*background-color: #fff;
+	border-bottom: 1px solid #afafaf;
+	content: "";
+	display: block;
+	height: 25px;*/
+}
+.page-template-page-oeuvres main:last-child{
+	margin-bottom: 0;
+}
+.page-template-page-oeuvres main:last-child:after{
+	display: none;
+}
+.page-template-page-oeuvres main article{
+	margin-bottom: 15px;
+}
+.page-template-page-oeuvres main article h3{
+	font-size: 1.4em;
+}
+.page-template-page-oeuvres main article h3.longtitre{
+	font-size: .8em;
+}
+.page-template-page-oeuvres main article:first-of-type{
+	/*margin-top: 30px;*/
+}
+.page-template-page-oeuvres main article:last-child{
+	/*margin-bottom: 0;*/
+}
+.page-template-page-oeuvres main article i.fa{
+	/*font-size: 3em;
+	line-height: 67px;*/
+	font-size: 10em;
+	line-height: 252px;
+}
+.page-template-page-books picture{
+    background-color: #000;
+    background-clip:content-box;
+    color: #fff;
+    font-size: 1em;
+    display: flex;
+}
+.page-template-page-books picture img{
+    border: 5px transparent solid;
+    box-sizing: border-box;
+}
+.page-template-page-books picture div,.page-template-page-books picture figure{
+    padding-left: 0;
+}
+.page-template-page-books picture div h3{
+    font-size: 1em;
+    text-transform: inherit;
+    margin-top: 5px;
+}
+.page-template-page-books picture div h3 a,.page-template-page-books picture div p{
+    font-family: "MuseoSans-300";
+}
+.page-template-page-books picture div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.page-template-page-books picture div i.fa{
+    color: rgb(187, 7, 6);
+}
+.page-template-page-books a:hover{
+    text-decoration: none;
+}
+/**************** SIDEBAR ********************/
+
+#sidebar ul, #sidebar ol{
+	padding:0;
+	list-style:none;
+}
+#sidebar ol h4 a{
+	color: #000;
+	font-size: 14px;
+}
+#sidebar ol .tribe-event-duration{
+	display: none;
+}
+#sidebar .widget_sidebar:first-child h3{
+	margin-top:0;
+}
+/******** JETPACK ******/
+
+.single-tribe_events #jp-relatedposts,#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date{
+	display: none !important;
+}
+
+/**************** FOOTER *********************/
+body>footer{
+	margin-bottom: 15px;
+}
+body>footer #logo-footer a{
+    padding: 10px 15px;
+}
+
+footer .social-links{
+	list-style:none;
+	padding: 0;
+	font-size: 2em;
+}
+footer .social-links li{
+	float: left;
+	margin-right: 18px;
+}
+footer nav .navbar-nav > li{
+	display:inline-block;
+}
+footer nav .navbar-nav > li:not(:first-child){
+	margin-left: 15px;
+}
+footer nav .navbar-nav > li > a{
+	padding:0;
+}
+footer nav .navbar-nav > li > a:hover{
+	background-color: transparent;
+	text-decoration:underline;
+}
+footer #logo-footer a{
+	margin-right: -15px;
+}
+
+/************ fancybox **************/
+
+#fancybox-overlay{
+    background-color: #333 !important;
+    opacity: .8 !important;
+}
+
+
+
+/*********** RESPONSIVE *************/
+@media screen and (max-width: 767px){
+        body:not(.home){
+                margin-top: 0px;
+        }
+        body>header{
+		margin-bottom: 15px;
+	}
+	.home #slider h3{
+		margin-top:5px;
+		margin-bottom: 10px;
+	}
+	.home #slider .carousel-caption a.btn{
+		margin-bottom: 5px;
+	}
+	.home #slider .carousel-caption{
+		bottom:5px;
+	}
+	.page-template-page-pratique main{
+		margin-top: 30px;
+	}
+	
+	.page-template-page-pratique main article{
+		display: block;
+	}
+	.page div.container header h1, .single div.container header h1{
+		font-size: 2em;
+		position: static;
+		margin: 0;
+	}
+	.page-template-page-boutique div.container header h1{
+		margin-top:5px;
+		margin-bottom: 5px;
+		max-width: 100%;
+		text-align: left;
+	}
+	.page .container section > header h1, .single .container section > article > header h1, .single-tribe_events article > header h1, .tax-lieux .container section > header h1, .tax-tagexpo section > header h1,
+	.single-tribe_events .container #tribe-events-content > header h1{
+		font-size: 2em;
+		position: static;
+		margin: 0;
+		max-width: 100%;
+	}
+	.page-template-page-presentation #lieux > div{
+		padding: 0 30px;
+	}
+	.container [id*=gallery-].gallery, #gallery-2.gallery{
+		padding: 15px;
+	}
+	footer .navbar-nav{
+		margin: inherit;
+	}
+	.single-tribe_events #tribe-events-pg-template{
+		padding:0;
+	}
+	.single-tribe_events #tribe-events-pg-template article{
+		border-bottom: 1px solid #afafaf;
+	}
+	.single-tribe_events #tribe-events-pg-template article header{
+		margin-bottom: 15px;
+	}
+	.single-tribe_events #tribe-events-content{
+		width: auto;
+	}
+	.single-tribe_events .tribe-events-schedule.tribe-clearfix{
+		margin-left: 15px;
+		max-width: 90%;
+	}
+        .single #content, .single #subcontent aside, .page-template-default #content, .page-template-default #subcontent aside, .tax-tagexpo #subcontent aside{
+            display: block;
+        }
+        body.single-realisation #subcontent aside:nth-child(even) figure,body.single-realisation #subcontent aside:nth-child(odd) figure,body.single-realisation #content figure,body.single-realisation #subcontent aside main,body.single-realisation #content main{
+            padding-right: 0;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+        body.single-realisation #subcontent aside main,body.single-realisation #content main{
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+        body.single-realisation #subcontent aside main p:last-child,body.single-realisation #content main p:last-child{
+            margin-bottom: 0;
+        }
+        .single #otherpost{
+            margin-right: 0;
+            margin-left: 0;
+            margin-top: 0;
+            width: 100%;
+        }
+        .archive aside article .thumbnail{
+            background-color: transparent;
+            border: none;
+        }.tax-tagexpo aside article .thumbnail img:hover{
+            transform: scale(1);
+        }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.page div.container header h1, .single div.container header h1{
+		font-size: 2.5em;
+	}
+	.navbar-left{
+		margin-left: -15px;
+	}
+	footer nav{
+		margin-left: -15px;
+	}
+	.page-template-page-presentation #lieux:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+        body:not(.home) {
+            margin-top: 192px;
+        }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	.page-template-page-presentation #lieux{
+		width: calc(33.3333% - 30px);
+		height: 400px;
+	}
+        body:not(.home) {
+            margin-top: 130px;
+        }
+}
+@media screen and (min-width: 1200px){
+	.navbar-left{
+		margin-left: -15px;
+	}
+	footer nav{
+		margin-left: -15px;
+	}
+	.page-template-page-presentation #lieux{
+		width: calc(33.3333% - 30px);
+		height: 400px;
+	}
+}
+
